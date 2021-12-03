@@ -50,10 +50,6 @@
           <td>{{robot.head.title}}</td>
           <td class="cost">{{robot.cost}}</td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
       </tbody>
     </table>
   </div>
@@ -259,5 +255,12 @@ export default {
   padding: 3px;
   font-size: 16px;
 }
-
+td, th {
+  text-align: left;
+  padding: 5px;
+  padding-right: 20px;
+}
+.cost {
+  text-align: right;
+}
 </style>
