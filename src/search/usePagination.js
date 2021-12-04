@@ -21,7 +21,9 @@ export default function usePagination(filteredSearchResults) {
 
   const pagedResults = computed(() => {
     const startIndex = currentStartIndex.value - 1;
-    const endIndex = currentEndIndex.value - 1;
+    const endIndex = currentEndIndex.value ? currentEndIndex.value : currentEndIndex.value - 1;
+    console.log(`start index: ${startIndex}`);
+    console.log(`end index: ${endIndex}`);
     return filteredSearchResults.value.slice(startIndex, endIndex);
   });
 

@@ -13,10 +13,13 @@ export default function useSearch(originalSearchTerm) {
     if (!term) searchResults = allParts;
     else {
       const lowerTerm = term.toLowerCase();
+      console.log(`lowerTerm: "${lowerTerm}"`);
       searchResults = allParts.filter(
         (part) => part.title.toLowerCase().includes(lowerTerm),
       );
     }
+    console.log(searchResults);
+    console.log(results.value);
     results.value = [...searchResults];
   };
 
