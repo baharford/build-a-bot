@@ -1,6 +1,5 @@
 <template>
   <div class="part" :class="position">
-    <div>User: {{user.userName}}</div>
     <img :src="selectedPart.src" @click="showPartInfo= !showPartInfo" title="arm"/>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
